@@ -1,0 +1,39 @@
+ import java.util.*; 
+  
+public class Main 
+{ 
+    public static void main(String[] args) 
+    { 
+       
+        int length = 4; 
+        System.out.println(geek_Password(length)); 
+    } 
+  
+    
+    static char[] geek_Password(int len) 
+    { 
+        System.out.println("Generating password using random() : "); 
+        System.out.print("Your new password is : "); 
+ 
+
+        int numbers = 0123; 
+        int number1 = 4567;
+        int number2 = 8999; 
+              
+  
+  
+        int values = numbers+number1+number2;
+  
+        Random rndm_method = new Random(); 
+  
+        char[] password = new char[len]; 
+  
+        for (int i = 0; i < len; i++) 
+        { 
+            password[i] = 
+              values.charAt(rndm_method.nextInt(values.length())); 
+  
+        } 
+        return password; 
+    } 
+} 
